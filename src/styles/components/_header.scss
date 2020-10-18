@@ -1,0 +1,55 @@
+.header {
+  height: 15vh;
+  padding: 4rem;
+  background-image: linear-gradient(
+      rgba($color-black, 0.6),
+      rgba($color-black, 0.6)
+    ),
+    url('../../img/header.jpg');
+  background-size: cover;
+  background-position: center bottom 38%;
+  border-bottom: 0.3rem solid $color-green;
+
+  &__container {
+    height: 100%;
+    width: 60%;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__form {
+    width: 60%;
+  }
+
+  &__input {
+    height: 5rem;
+    width: 70%;
+    padding: 1rem 2rem;
+    color: $color-black;
+    font-size: 2rem;
+    font-weight: bold;
+    background-image: url('../../img/input.jpg');
+    background-size: cover;
+    border-radius: 5rem;
+    outline: none;
+
+    overflow: hidden;
+    animation: moveInBottom 1s ease-out;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-black;
+      padding: 1rem 2rem;
+    }
+  }
+}

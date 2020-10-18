@@ -1,0 +1,83 @@
+.main {
+  min-height: 85vh;
+  background: $color-grey-dark-3;
+  padding: 5rem 4rem;
+
+  .card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+
+    .card {
+      margin-top: 2rem;
+      border: 0.2rem solid $color-black;
+      border-radius: 1rem;
+      overflow: hidden;
+      padding: 1rem;
+      cursor: pointer;
+      display: flex;
+      -moz-osx-font-smoothing: grayscale;
+      backface-visibility: hidden;
+      animation: fadeIn 1s ease-out;
+      transition: all 0.4s ease-out;
+
+      &__info-container {
+        margin-left: 2rem;
+      }
+
+      &__image {
+        height: 11rem;
+        width: 11rem;
+        border-radius: 50%;
+      }
+      &__id {
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: $color-white;
+      }
+
+      &__name {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $color-white;
+      }
+
+      &__status {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        vertical-align: text-top;
+
+        &-Alive {
+          color: $color-green-light;
+        }
+
+        &-Dead {
+          color: red;
+        }
+        &-unknown {
+          color: $color-grey-dark;
+        }
+      }
+
+      &__list {
+        list-style: none;
+      }
+
+      &__item {
+        font-size: 1.3rem;
+      }
+
+      &:hover,
+      &:active {
+        border: 0.2rem solid $color-green-light;
+        background-image: linear-gradient(
+            rgba($color-black, 0.6),
+            rgba($color-black, 0.6)
+          ),
+          url('../../img/input.jpg');
+        background-size: cover;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
